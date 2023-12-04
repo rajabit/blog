@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+     .surface {
+          @apply dark:border-zinc-700 shadow backdrop-blur-md dark:bg-white/10 bg-slate-300/30 bg-slate-50;
+     }
+
+     .card {
+          @apply rounded border p-5 surface;
+     }
+
+     .primary-button {
+          @apply rounded bg-blue-700 px-3 py-2 flex items-center text-white shadow hover:bg-blue-600 hover:shadow-none duration-150 active:bg-blue-500
+     }
+
+     .primary-button svg {
+          @apply w-4 h-4 me-1
+     }
+
+     input[type=text],
+     input[type=number],
+     input[type=email],
+     textarea, .text-input {
+          @apply dark:bg-slate-950 bg-slate-100 rounded dark:text-white text-slate-900 w-full border dark:border-gray-500 border-gray-300 focus:border-blue-700;
+     }
+
+     input:has(+ div[class=error]) {
+          @apply !border-rose-700 !ring-rose-700 !text-rose-700
+     }
+
+     textarea:has(+ div[class=error]) {
+          @apply !border-rose-700 !ring-rose-700 !text-rose-700
+     }
+
+     textarea {
+          @apply h-32 resize-none hover:resize
+     }
+
+     .error {
+          @apply text-rose-700 px-1
+     }
+
+     label:has(+ textarea) {
+          @apply w-full px-1
+     }
+
+     label:has(+ input) {
+          @apply w-full px-1
+     }
+
+     .bg-color {
+          @apply dark:bg-slate-950 bg-slate-200 text-slate-950 dark:text-white;
+     }
+
+     strong {
+          @apply font-bold
+     }
+
+     h1 {
+          @apply text-5xl;
+     }
+
+     h2 {
+          @apply text-4xl;
+     }
+
+
+     h3 {
+          @apply text-3xl;
+     }
+
+
+     h4 {
+          @apply text-2xl;
+     }
+
+
+     h5 {
+          @apply text-xl;
+     }
+
+
+     h6 {
+          @apply text-lg;
+     }
+
+     blockquote {
+          @apply p-4 my-4 border-s-4 border-gray-300 bg-gray-200 dark:border-gray-500 dark:bg-gray-800
+     }
+
+     .tiptap-editor {
+          @apply dark:bg-slate-950 bg-slate-100 rounded dark:text-white text-slate-900 w-full border dark:border-gray-500 border-gray-300 focus:border-blue-700;
+     }
+
+     .tiptap-editor>.menu {
+          @apply border-b flex flex-wrap dark:border-gray-500 items-center divide-x dark:divide-gray-300
+     }
+
+     .tiptap-editor>.menu>div {
+          @apply p-1
+     }
+
+     .tiptap-editor>.menu button {
+          @apply rounded hover:bg-white/50 duration-150 p-1
+     }
+
+     .tiptap-editor>.menu button svg {
+          @apply h-6 w-6 dark:fill-white fill-black;
+
+     }
+
+     .editor img {
+          @apply rounded shadow border
+     }
+
+     .custom-link {
+          @apply text-blue-800 dark:text-blue-600 active:text-purple-950 cursor-pointer hover:underline
+     }
+
+     ul {
+          @apply list-disc
+     }
+
+     ol {
+          @apply list-decimal
+     }
+}
