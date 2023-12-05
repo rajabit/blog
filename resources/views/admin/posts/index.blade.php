@@ -2,7 +2,7 @@
      <div class="mb-5">
 
           <div class="flex w-full items-center justify-between">
-               <div class="text-4xl py-5  font-bold">
+               <div class="text-4xl py-5 font-bold">
                     Posts
                </div>
                <a href="{{ route('admin.posts.create') }}" class="primary-button">
@@ -31,6 +31,7 @@
                          <tr>
                               <th>#</th>
                               <th>Title</th>
+                              <th>User</th>
                               <th>Slug</th>
                               <th>Views</th>
                               <th>Published</th>
@@ -43,6 +44,11 @@
                          <tr title="{{ $post->summary }}">
                               <td>{{ $post->id }}</td>
                               <td class="capitalize">{{ $post->title }}</td>
+                              <td>
+                                   <a class="custom-link">
+                                        {{$post->user?->name}}
+                                   </a>
+                              </td>
                               <td class="lowercase">{{ $post->slug }}</td>
                               <td>{{ $post->views }}</td>
                               <td>{{ $post->published_at->format('M d, Y') }}</td>

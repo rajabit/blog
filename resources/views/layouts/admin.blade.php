@@ -33,14 +33,16 @@
 
                         <!-- Navigation Links -->
                         <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                            <x-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
+                            <x-nav-link :href="route('admin.dashboard')"
+                                :active="request()->routeIs('admin.dashboard')">
                                 {{ __('Dashboard') }}
                             </x-nav-link>
                         </div>
 
-                          <!-- Navigation Links -->
+                        <!-- Navigation Links -->
                         <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                            <x-nav-link :href="route('admin.posts.index')" :active="request()->routeIs('admin.posts.index')">
+                            <x-nav-link :href="route('admin.posts.index')"
+                                :active="request()->routeIs('admin.posts.index')">
                                 {{ __('Posts') }}
                             </x-nav-link>
                         </div>
@@ -78,8 +80,7 @@
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
 
-                                    <x-dropdown-link :href="route('logout')"
-                                        onclick="event.preventDefault();
+                                    <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </x-dropdown-link>
@@ -130,8 +131,7 @@
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
-                            <x-responsive-nav-link :href="route('logout')"
-                                onclick="event.preventDefault();
+                            <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
                                         this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-responsive-nav-link>
@@ -144,15 +144,19 @@
 
         <!-- Page Heading -->
         @if (isset($header))
-            <header class="bg-white dark:bg-gray-800 shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
+        <header class="bg-white dark:bg-gray-800 shadow">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                {{ $header }}
+            </div>
+        </header>
         @endif
 
         <!-- Page Content -->
         <main class="container">
+            @if(session('success'))
+            <div class="w-full bg-emerald-600 px-3 py-1 rounded border-emerald-900 mt-5 border">{{session('success')}}
+            </div>
+            @endif
             {{ $slot }}
         </main>
     </div>

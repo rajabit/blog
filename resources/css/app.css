@@ -8,7 +8,7 @@
      }
 
      .card {
-          @apply rounded border p-5 surface;
+          @apply w-full rounded border p-5 surface;
      }
 
      .primary-button {
@@ -16,6 +16,14 @@
      }
 
      .primary-button svg {
+          @apply w-4 h-4 me-1
+     }
+
+     .danger-button {
+          @apply primary-button bg-rose-500 border-rose-800 text-white hover:bg-rose-800 active:bg-rose-900
+     }
+
+     .danger-button svg {
           @apply w-4 h-4 me-1
      }
 
@@ -28,7 +36,7 @@
      }
 
      .icon-button {
-          @apply p-1 rounded-full bg-gray-300  hover:bg-gray-400 dark:bg-slate-600 flex items-center shadow justify-center hover:dark:bg-slate-800 hover:dark:border-slate-800 duration-150 hover:shadow-none
+          @apply p-1 rounded-full bg-gray-300 hover:bg-gray-400 dark:bg-slate-600 flex items-center shadow justify-center hover:dark:bg-slate-800 hover:dark:border-slate-800 duration-150 hover:shadow-none
      }
 
      .icon-button svg {
