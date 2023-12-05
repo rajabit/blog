@@ -11,7 +11,7 @@ class StorePostRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return auth()->check();
     }
 
     /**
@@ -22,7 +22,10 @@ class StorePostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => ['required', 'max:255'],
+            'summary' => ['required', 'max:2048'],
+            'slug' => ['required', 'alpha_dash', 'max:255'],
+            'content' => ['required'],
         ];
     }
 }

@@ -25,6 +25,8 @@ return new class extends Migration
             $table->dateTime('published_at')->nullable();
 
             $table->foreign('user_id')->on('users')->references('id')->onDelete('cascade');
+            $table->fullText('summary')->language('english');
+
             $table->timestamps();
         });
     }

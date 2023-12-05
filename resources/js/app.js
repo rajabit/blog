@@ -22,6 +22,7 @@ document.addEventListener('alpine:init', () => {
           let editor
           return {
                updatedAt: Date.now(),
+               html: "",
                init() {
                     const _this = this
                     editor = new Editor({
@@ -63,9 +64,11 @@ document.addEventListener('alpine:init', () => {
                          content: content,
                          onCreate({ editor }) {
                               _this.updatedAt = Date.now()
+                              _this.html = editor.getHTML();
                          },
                          onUpdate({ editor }) {
                               _this.updatedAt = Date.now()
+                              _this.html = editor.getHTML();
                          },
                          onSelectionUpdate({ editor }) {
                               _this.updatedAt = Date.now()
@@ -74,6 +77,9 @@ document.addEventListener('alpine:init', () => {
                },
                isLoaded() {
                     return editor
+               },
+               getContent() {
+                    return editor.getHTML();
                },
                addImage() {
                     const url = window.prompt('URL')
