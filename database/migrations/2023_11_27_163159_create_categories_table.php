@@ -21,7 +21,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('categories_posts_relation', function (Blueprint $table) {
+        Schema::create('category_post', function (Blueprint $table) {
             $table->unsignedBigInteger('post_id');
             $table->unsignedBigInteger('category_id');
 
@@ -35,7 +35,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categories_posts_relation');
+        Schema::dropIfExists('category_post');
         Schema::dropIfExists('categories');
     }
 };

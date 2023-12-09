@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
@@ -17,5 +18,7 @@ use Illuminate\Support\Facades\Artisan;
 
 Artisan::command('test', function () {
     Post::factory(128)->create();
+    Category::factory(64)->create();
+
     $this->comment('Done.');
 })->purpose('Display an inspiring quote');
