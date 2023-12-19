@@ -3,197 +3,257 @@
 @tailwind utilities;
 
 @layer components {
-     .surface {
-          @apply dark:border-zinc-700 shadow backdrop-blur-md dark:bg-white/10 bg-slate-300/30 bg-slate-50;
-     }
+    .surface {
+        @apply dark:border-zinc-700 shadow backdrop-blur-md dark:bg-white/10 bg-slate-300/30 bg-slate-50;
+    }
 
-     .card {
-          @apply w-full rounded border p-5 surface;
-     }
+    .card {
+        @apply w-full rounded border surface;
+    }
 
-     .primary-button {
-          @apply rounded bg-blue-700 px-3 py-2 flex items-center text-white shadow hover:bg-blue-600 hover:shadow-none duration-150 active:bg-blue-500
-     }
+    .primary-button {
+        @apply rounded bg-blue-700 px-3 py-2 flex items-center text-white shadow hover:bg-blue-600 hover:shadow-none duration-150 active:bg-blue-500
+    }
 
-     .primary-button svg {
-          @apply w-4 h-4 me-1
-     }
+    .primary-button svg {
+        @apply w-4 h-4 me-1
+    }
 
-     .danger-button {
-          @apply primary-button bg-rose-500 border-rose-800 text-white hover:bg-rose-800 active:bg-rose-900
-     }
+    .danger-button {
+        @apply primary-button bg-rose-500 border-rose-800 text-white hover:bg-rose-800 active:bg-rose-900
+    }
 
-     .danger-button svg {
-          @apply w-4 h-4 me-1
-     }
+    .danger-button svg {
+        @apply w-4 h-4 me-1
+    }
 
-     .secondary-button {
-          @apply border shadow dark:border-gray-600 border-slate-300 flex items-center rounded px-3 py-2 hover:shadow-none bg-slate-300 dark:bg-gray-800 dark:text-white duration-150 dark:hover:bg-slate-900 dark:active:bg-slate-950 hover:bg-gray-300 active:bg-gray-400
-     }
+    .secondary-button {
+        @apply border shadow dark:border-gray-600 border-slate-300 flex items-center rounded px-3 py-2 hover:shadow-none bg-slate-300 dark:bg-gray-800 dark:text-white duration-150 dark:hover:bg-slate-900 dark:active:bg-slate-950 hover:bg-gray-300 active:bg-gray-400
+    }
 
-     .secondary-button svg {
-          @apply w-4 h-4 me-1;
-     }
+    .secondary-button svg {
+        @apply w-4 h-4 me-1;
+    }
 
-     .icon-button {
-          @apply p-1 rounded-full bg-gray-300 hover:bg-gray-400 dark:bg-slate-600 flex items-center shadow justify-center hover:dark:bg-slate-800 hover:dark:border-slate-800 duration-150 hover:shadow-none
-     }
+    .icon-button {
+        @apply p-1 rounded-full bg-gray-300 hover:bg-gray-400 dark:bg-slate-600 flex items-center shadow justify-center hover:dark:bg-slate-800 hover:dark:border-slate-800 duration-150 hover:shadow-none
+    }
 
-     .icon-button svg {
-          @apply w-6 h-6 dark:text-gray-300 text-gray-700;
-     }
+    .icon-button svg {
+        @apply w-6 h-6 dark:text-gray-300 text-gray-700;
+    }
 
-     .text-button {
-          @apply px-3 py-2 rounded flex items-center duration-150 hover:dark:bg-gray-800 active:dark:bg-gray-700 hover:bg-gray-300 active:bg-gray-400
-     }
+    .text-button {
+        @apply px-3 py-2 rounded flex items-center duration-150 hover:dark:bg-gray-800 active:dark:bg-gray-700 hover:bg-gray-300 active:bg-gray-400
+    }
 
-     .text-button svg {
-          @apply w-4 h-4 me-1
-     }
+    .text-button svg {
+        @apply w-4 h-4 me-1
+    }
 
-     input[type=text],
-     input[type=number],
-     input[type=email],
-     textarea,
-     .text-input {
-          @apply dark:bg-slate-950 bg-slate-100 rounded dark:text-white text-slate-900 w-full border dark:border-gray-500 border-gray-300 focus:border-blue-700;
-     }
+    input[type=text],
+    input[type=number],
+    input[type=email],
+    textarea,
+    .text-input {
+        @apply dark:bg-slate-950 bg-slate-100 rounded dark:text-white text-slate-900 w-full border dark:border-gray-500 border-gray-300 focus:border-blue-700;
+    }
 
-     input:has(+ div[class=error]) {
-          @apply !border-rose-700 !ring-rose-700 !text-rose-700
-     }
+    input:has(+ div[class=error]) {
+        @apply !border-rose-700 !ring-rose-700 !text-rose-700
+    }
 
-     textarea:has(+ div[class=error]) {
-          @apply !border-rose-700 !ring-rose-700 !text-rose-700
-     }
+    textarea:has(+ div[class=error]) {
+        @apply !border-rose-700 !ring-rose-700 !text-rose-700
+    }
 
-     textarea {
-          @apply h-32 resize-none hover:resize
-     }
+    textarea {
+        @apply h-32 resize-none hover:resize
+    }
 
-     .error {
-          @apply text-rose-700 px-1
-     }
+    .error {
+        @apply text-rose-700 px-1
+    }
 
-     label:has(+ textarea) {
-          @apply w-full px-1
-     }
+    label:has(+ textarea) {
+        @apply w-full px-1
+    }
 
-     label:has(+ input) {
-          @apply w-full px-1
-     }
+    label:has(+ input) {
+        @apply w-full px-1
+    }
 
-     .bg-color {
-          @apply dark:bg-slate-950 bg-slate-200 text-slate-950 dark:text-white;
-     }
+    .bg-color {
+        @apply dark:bg-slate-950 bg-slate-200 text-slate-950 dark:text-white;
+    }
 
-     strong {
-          @apply font-bold
-     }
+    strong {
+        @apply font-bold
+    }
 
-     h1 {
-          @apply text-5xl;
-     }
+    h1 {
+        @apply text-5xl;
+    }
 
-     h2 {
-          @apply text-4xl;
-     }
-
-
-     h3 {
-          @apply text-3xl;
-     }
+    h2 {
+        @apply text-4xl;
+    }
 
 
-     h4 {
-          @apply text-2xl;
-     }
+    h3 {
+        @apply text-3xl;
+    }
 
 
-     h5 {
-          @apply text-xl;
-     }
+    h4 {
+        @apply text-2xl;
+    }
 
 
-     h6 {
-          @apply text-lg;
-     }
+    h5 {
+        @apply text-xl;
+    }
 
-     blockquote {
-          @apply p-4 my-4 border-s-4 border-gray-300 bg-gray-200 dark:border-gray-500 dark:bg-gray-800
-     }
 
-     .tiptap-editor {
-          @apply dark:bg-slate-950 bg-slate-100 rounded dark:text-white text-slate-900 w-full border dark:border-gray-500 border-gray-300 focus:border-blue-700;
-     }
+    h6 {
+        @apply text-lg;
+    }
 
-     .tiptap-editor>.menu {
-          @apply border-b flex flex-wrap dark:border-gray-500 items-center divide-x dark:divide-gray-300
-     }
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
 
-     .tiptap-editor>.menu>div {
-          @apply p-1
-     }
+    ::-webkit-scrollbar-track {
+        @apply bg-white dark:bg-gray-300
+    }
 
-     .tiptap-editor>.menu button {
-          @apply rounded hover:bg-white/50 duration-150 p-1
-     }
+    ::-webkit-scrollbar-thumb {
+        @apply bg-gray-300 dark:bg-slate-950 rounded
+    }
 
-     .tiptap-editor>.menu button svg {
-          @apply h-6 w-6 dark:fill-white fill-black;
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-gray-700 dark:bg-black rounded
+    }
 
-     }
+    blockquote {
+        @apply p-4 my-4 border-s-4 border-gray-300 bg-gray-200 dark:border-gray-500 dark:bg-gray-800
+    }
 
-     .editor img {
-          @apply rounded shadow border
-     }
+    .tiptap-editor {
+        @apply dark:bg-slate-950 bg-slate-100 rounded dark:text-white text-slate-900 w-full border dark:border-gray-500 border-gray-300 focus:border-blue-700;
+    }
 
-     .custom-link {
-          @apply text-blue-800 dark:text-blue-600 active:text-purple-950 cursor-pointer hover:underline
-     }
+    .tiptap-editor>.menu {
+        @apply border-b flex flex-wrap dark:border-gray-500 items-center divide-x dark:divide-gray-300
+    }
 
-     ul {
-          @apply list-disc
-     }
+    .tiptap-editor>.menu>div {
+        @apply p-1
+    }
 
-     ol {
-          @apply list-decimal
-     }
+    .tiptap-editor>.menu button {
+        @apply rounded hover:bg-white/50 duration-150 p-1
+    }
 
-     div.table {
-          @apply w-full rounded overflow-hidden surface border dark:border-slate-700;
-     }
+    .tiptap-editor>.menu button svg {
+        @apply h-6 w-6 dark:fill-white fill-black;
 
-     div.table>table {
-          @apply w-full border-y dark:border-slate-700;
-     }
+    }
 
-     div.table>table tr {
-          @apply dark:hover:bg-slate-950 hover:bg-gray-300 duration-150
-     }
+    .editor img {
+        @apply rounded shadow border
+    }
 
-     div.table>table th {
-          @apply text-center dark:bg-slate-950 bg-slate-200 p-3 text-gray-500;
-     }
+    .custom-link {
+        @apply text-blue-800 dark:text-blue-600 active:text-purple-950 cursor-pointer hover:underline
+    }
 
-     div.table>table td {
-          @apply border-t p-3 dark:border-slate-700 text-center text-ellipsis;
-     }
+    ul {
+        @apply list-disc
+    }
 
-     .pagination {
-          @apply p-5
-     }
+    ol {
+        @apply list-decimal
+    }
 
-     .pagination nav p {
-          @apply dark:text-white;
-     }
+    div.table {
+        @apply w-full rounded overflow-hidden surface border dark:border-slate-700;
+    }
 
-     .pagination a {
-          @apply dark:bg-gray-800 dark:text-white dark:border-gray-600;
-          @apply dark:hover:bg-gray-900
-     }
+    div.table>table {
+        @apply w-full border-y dark:border-slate-700;
+    }
 
-     .pagination span {
-          @apply dark:bg-gray-900 dark:text-gray-400 dark:border-gray-600 bg-gray-200;
-     }
+    div.table>table tr {
+        @apply dark:hover:bg-slate-950 hover:bg-gray-300 duration-150
+    }
+
+    div.table>table th {
+        @apply text-center dark:bg-slate-950 bg-slate-200 p-3 text-gray-500;
+    }
+
+    div.table>table td {
+        @apply border-t p-3 dark:border-slate-700 text-center text-ellipsis;
+    }
+
+    .pagination {
+        @apply p-5
+    }
+
+    .pagination nav p {
+        @apply dark:text-white;
+    }
+
+    .pagination a {
+        @apply dark:bg-gray-800 dark:text-white dark:border-gray-600;
+        @apply dark:hover:bg-gray-900
+    }
+
+    .pagination span {
+        @apply dark:bg-gray-900 dark:text-gray-400 dark:border-gray-600 bg-gray-200;
+    }
+
+    .modal {
+        @apply hidden
+    }
+
+    .modal.active {
+        @apply flex fixed inset-0 w-full justify-center items-center h-full backdrop-blur-sm bg-black/30 duration-200;
+    }
+
+    .modal>.card {
+        @apply w-96 min-h-fit max-h-[600px] backdrop-blur-2xl dark:bg-gray-900 bg-slate-50 duration-200 overflow-x-hidden overflow-y-scroll
+    }
+
+    .card>.card-title {
+        @apply font-bold text-xl px-4 py-3 sticky top-0 surface shadow
+    }
+
+    .card>.content {
+        @apply p-5;
+    }
+
+    .list {
+        @apply divide-y divide-gray-200 dark:divide-gray-800
+    }
+
+    .list>.item {
+        @apply flex justify-center items-center w-full flex-row select-none hover:bg-gray-200 dark:hover:bg-slate-950 cursor-pointer duration-150
+    }
+
+    .list>.item>.content {
+        @apply flex-1 flex-col justify-start items-start w-full py-2 px-3
+    }
+
+    .list>.item>.content>.title {
+        @apply font-bold
+    }
+
+    .list>.item>.content>.subtitle {
+        @apply text-gray-600 dark:text-gray-400 line-clamp-1 w-full
+    }
+
+    .list>.item>.logo {
+        @apply flex-shrink ps-3
+    }
 }

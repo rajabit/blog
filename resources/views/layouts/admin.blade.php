@@ -168,7 +168,8 @@
         <!-- Page Content -->
         <main class="container">
             @if(session('success'))
-            <div class="w-full bg-emerald-600 px-3 py-1 rounded border-emerald-900 mt-5 border">{{session('success')}}
+            <div class="w-full bg-emerald-600 px-3 py-1 rounded border-emerald-900 mt-5 border">
+                {{session('success')}}
             </div>
             @endif
             {{ $slot }}

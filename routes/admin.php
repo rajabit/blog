@@ -8,3 +8,8 @@ Route::resources([
     'posts' => App\Http\Controllers\Admin\PostController::class,
     'categories' => App\Http\Controllers\Admin\CategoryController::class,
 ]);
+
+
+Route::apiResources([
+    'post-category' => App\Http\Controllers\Admin\PostCategoryController::class
+]);
