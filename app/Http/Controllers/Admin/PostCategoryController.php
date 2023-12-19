@@ -30,7 +30,9 @@ class PostCategoryController extends Controller
      */
     public function store(PostCategoryRequest $request)
     {
-        return response()->json(Post::query()->findOrFail($request->input('post_id'))->categories()->attach($request->input('category_id')));
+        Post::query()->findOrFail($request->input('post_id'))->categories()->attach($request->input('category_id'));
+        return response()->json(Post::query()
+            ->findOrFail($request->input('post_id'))->categories()->paginate());
     }
 
     /**
@@ -38,6 +40,8 @@ class PostCategoryController extends Controller
      */
     public function destroy(Request $request, string $id)
     {
-        return response()->json(Post::query()->findOrFail($request->input('post_id'))->categories()->detach($id));
+        Post::query()->findOrFail($request->input('post_id'))->categories()->detach($id);
+        return response()->json(Post::query()
+            ->findOrFail($request->input('post_id'))->categories()->paginate());
     }
 }
